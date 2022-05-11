@@ -86,10 +86,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public Account getAccount(String accountNo) throws InvalidAccountException {
         Account returnAcc;
-        String query = "SELECT * FROM ACCOUNT_TABLE WHERE ACCOUNT_NO == " + accountNo;
+        String query = "SELECT * FROM ACCOUNT_TABLE WHERE ACCOUNT_NO = " + accountNo;
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery(query, null);
-//        Cursor cursor = db.query("ACCOUNT_TABLE", null, "ACCOUNT_NO = ?", null, null, null, null);
+//        Cursor cursor = db.rawQuery(query, null);
+        Cursor cursor = db.query("ACCOUNT_TABLE", null, "ACCOUNT_NO = ?", new String[]{accountNo}, null, null, null);
 
         if (!cursor.moveToFirst()) {
             String message = "Account " + accountNo + " is invalid";
