@@ -1,4 +1,0 @@
-#Wed May 11 06:53:39 IST 2022
-base.0=G\:\\Sem 4\\Database Systems\\Mini Lab\\SimpleExpenseManager\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeDexDebugAndroidTest\\classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
